@@ -1,0 +1,201 @@
+$base_color_1: #333333;
+$base_color_2: #999999;
+$base_color_3: #fff;
+$font_family_1: "Proxima-Nova",Arial,Helvetica,sans-serif;
+$font_family_2: 'Proxima-Nova', sans-serif;
+$background_color_1: #F08536;
+$background_color_2: #3976AF;
+$background_color_3: #00C2BB;
+$verticalMarginGap: 100px;
+$oneHundyPercento: 100%;
+
+@-webkit-keyframes "fadein" {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes "fadein" {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes "fadeout" {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes "fadeout" {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+body {
+  font-family: $font_family_1;
+  font-size: 12px;
+}
+.g-hed {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 3px 0;
+}
+.g-source-bold {
+  text-align: left;
+  font-size: 11px;
+  font-weight: bold;
+  color: $base_color_1;
+}
+.g-source {
+  margin-bottom: 2px;
+  font-size: 11px;
+  color: $base_color_2;
+}
+.g-intro {
+  font-size: 18px;
+  margin: 0px 0px 10px 0px;
+  color: $base_color_1;
+}
+.g-num {
+  fill: #c12726;
+}
+.g-num2 {
+  fill: #e0e0e0;
+}
+.g-labels {
+  font-family: $font_family_1;
+  font-weight: bold;
+  font-size: 16px;
+}
+.x.axis {
+  line {
+    display: none;
+  }
+  text {
+    display: none;
+  }
+}
+.y.axis {
+  line {
+    display: none;
+  }
+  text {
+    font-family: $font_family_2;
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: end !important;
+    fill: #c12726;
+  }
+}
+.domain {
+  display: none;
+}
+.logo {
+  border-bottom: 1px solid #c3cddf;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.logoImg {
+  width: 185px;
+}
+.g-chart {
+  border-bottom: 1px solid #c3cddf;
+}
+.contentRow {
+  margin: 0 auto;
+  padding-top: $verticalMarginGap;
+  padding-bottom: $verticalMarginGap;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.sparktick {
+  margin-bottom: $verticalMarginGap;
+}
+rect.normal {
+  fill: black;
+}
+rect.shutout {
+  fill: red;
+}
+path.team {
+  stroke-width: 1;
+  fill: transparent;
+}
+.legend {
+  margin-top: 40px;
+  width: 180px;
+  p {
+    margin: 0px;
+    float: right;
+    margin-top: -20px;
+  }
+}
+.proLeg {
+  width: 100px;
+  background-color: $background_color_1;
+  display: block;
+}
+.conLeg {
+  width: 100px;
+  background-color: $background_color_2;
+  display: block;
+}
+.masthead {
+  background-image: url('../img/home-bg.jpg') !important;
+}
+.inspirationImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: $verticalMarginGap;
+}
+.inspirationImg {
+  img {
+    width: $oneHundyPercento;
+    height: $oneHundyPercento;
+  }
+  text-align: center;
+  width: 500px;
+  height: 350px;
+  flex: 1;
+}
+#snackbar, #snackbar2 {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: $background_color_3;
+  color: $base_color_3;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+#snackbar.show, #snackbar2.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
